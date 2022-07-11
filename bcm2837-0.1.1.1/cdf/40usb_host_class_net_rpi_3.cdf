@@ -54,3 +54,16 @@ Component INCLUDE_USB_GEN2_LAN78XX_RPI_3 {
     _INIT_ORDER     usrUsbGroupInit
     INIT_AFTER      usbHstClassInit
 }
+
+Component INCLUDE_USB_GEN2_LAN9514_RPI_3 {
+    NAME            LAN9514 Ethernet Controller
+    SYNOPSIS        Raspberry Pi 3B LAN9514 USB 2.0 Ethernet Controller
+    _CHILDREN       FOLDER_USB_GEN2_END_CONTROLLERS
+    MODULES         usb2Lan9514_rpi_3.o usb2End.o
+    REQUIRES        INCLUDE_USB \
+                    INCLUDE_USB_GEN2_HELPER
+    PROTOTYPE       STATUS usb2Lan9514Init (char *pName);
+    INIT_RTN        usb2Lan9514Init (NULL);
+    _INIT_ORDER     usrUsbGroupInit
+    INIT_AFTER      usbHstClassInit
+}
