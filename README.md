@@ -10,7 +10,7 @@ processor-based platform.
 
 # Project License
 
-Copyright (c) 2019 Wind River Systems, Inc.
+Copyright (c) 2019-2023 Wind River Systems, Inc.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 # Prerequisite(s)
 
-* You must have Wind River® VxWorks® 7 SR0620 released source code and
+* You must have Wind River® VxWorks® 7 21.07 released source code and
   development environment to support "Raspberry Pi 3B/B+ Community BSP".
 
 # Building and Using
@@ -52,11 +52,11 @@ and bcm2837 PSL, please check the following installation location to see whether
 BSP and PSL existed already. 
 The rpi_3 BSP is installed at:
 ```Bash
-***installDir***/vxworks-7/pkgs_v2/unsupported/rpi_3/rpi_3-W.X.Y.Z
+***installDir***/vxworks/21.07/os/unsupported/rpi_3/rpi_3
 ```
 The bcm2837 PSL is installed at:
 ```Bash
-***installDir***/vxworks-7/pkgs_v2/unsupported/rpi_3/bcm2837-W.X.Y.Z
+***installDir***/vxworks/21.07/os/unsupported/rpi_3/bcm2837
 ```
 If the installed version of BSP/PSL is the same or newer than the Open Source BSP 
 published here, there's no need to download and install the Open Source BSP from 
@@ -70,7 +70,7 @@ install.
 
 Download all layers from Github.
 ```Bash
-git clone https://github.com/Wind-River/vxw7-bsp-raspberry-pi.git
+git clone https://github.com/danieleftodi/vxw7-bsp-raspberry-pi.git
 cd vxw7-bsp-raspberry-pi
 ```
 
@@ -89,14 +89,14 @@ layers among the source tree.
 Here's how it’s done:
 
 ```Bash
-cp -r rpi_3-W.X.Y.Z ***installDir***/vxworks-7/pkgs_v2/unsupported/rpi_3/
-cp -r bcm2837-W.X.Y.Z ***installDir***/vxworks-7/pkgs_v2/unsupported/rpi_3/
+cp -r rpi_3 ***installDir***/vxworks/21.07/os/unsupported/rpi_3/
+cp -r bcm2837 ***installDir***/vxworks/21.07/os/unsupported/rpi_3/
 ```
 
 #### Install beside the source tree
 
 All layers are copied in a place that's outside the default scanning folder, i.e., 
-vxworks-7/pkgs_v2, and when launching the Development Shell or Workbench, the path containing 
+vxworks/21.07/os/unsupported/rpi_3, and when launching the Development Shell or Workbench, the path containing 
 this BSP is provided to the development environment. The advantage of this method is obvious, 
 the package can be easily turn on or off, and the source code stays in one unified location 
 external to the default installation, which makes it easier to manage.
@@ -108,7 +108,7 @@ or Workbench:
 export WIND_LAYER_PATHS=/home/rpi_3
 export WIND_BSP_PATHS=/home/rpi_3
 ```
-then enter into the existing VxWorks 7 installation directory
+then enter into the existing VxWorks 7 (21.07) installation directory
 ```Bash
 cd ***installDir***
 ```
@@ -126,8 +126,8 @@ or Workbench
 The building process comprises three parts, U-Boot, VSB project and VIP project.
 A Wind River-compiled U-boot image had been added into this BSP, you can use it 
 directly. Alternatively, you can get the U-Boot code from related official server. 
-The building processes of these three parts are all described in target.txt. Target.txt 
-can be found under rpi_3-W.X.Y.Z directory.
+The building processes of these three parts are all described in target.txt. target.txt 
+can be found under rpi_3/ directory.
 
 ### Drivers
 
