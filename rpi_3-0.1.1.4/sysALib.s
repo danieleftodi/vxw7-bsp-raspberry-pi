@@ -1,7 +1,7 @@
 /* sysALib.s - Raspberry Pi 3 Family system-dependent routines */
 
 /*
- * Copyright (c) 2019 Wind River Systems, Inc.
+ * Copyright (c) 2019-2020 Wind River Systems, Inc.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -33,6 +33,7 @@
 /*
 modification history
 --------------------
+25jun20,eli  Remove __DCC__ #ifdefs (V7COR-7450)
 08mar19,hkl  created (F11409)
 */
 
@@ -127,8 +128,6 @@ sysLib.c.
         .section .text.entry, "ax"
 #elif defined (__GNUC__)
         .section .text.entry, "ax"
-#elif defined(__DCC__)
-        .section .text.entry, 4, "rx"
 #else
 #error "TOOL not supported!"
 #endif

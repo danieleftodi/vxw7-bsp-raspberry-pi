@@ -38,7 +38,7 @@ include $(WIND_KRNL_MK)/defs.library.mk
 
 C_SOURCE = usbSynopsysHcdInitExit_rpi_3.c usbSynopsysHcdHardwareAccess_rpi_3.c usbSynopsysHcdUtil_rpi_3.c \
            usbSynopsysHcdRhEmulation_rpi_3.c usbSynopsysHcdTransferManagement_rpi_3.c usbSynopsysHcdEventHandler_rpi_3.c \
-           vxbFdtUsbPhyAltSocGen5_rpi_3.c usb2Lan78xx_rpi_3.c
+           vxbFdtUsbPhyAltSocGen5_rpi_3.c usb2Lan78xx_rpi_3.c usb2Lan9514_rpi_3.c
            
 OBJS = $(C_SOURCE:.c=.o)
 
