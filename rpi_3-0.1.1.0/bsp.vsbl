@@ -46,7 +46,7 @@ Layer rpi_3
                         package (BSP)
     HELP                (Unsupported) This layer provides the Raspberry Pi 3 \
                         family board support package.
-    VERSION             0.1.1.3
+    VERSION             0.1.1.4
     VENDOR              Wind River
     LAYER_REQUIRES      FDT VXBUS_DRV UTILS BCM2837 ARM
     FEATURE_REQUIRES    {CPU_CORTEX_A53, {ARM ARM_NEW_CPU_TYPES},}
