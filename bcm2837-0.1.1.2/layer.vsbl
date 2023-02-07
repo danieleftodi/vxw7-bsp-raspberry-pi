@@ -46,7 +46,7 @@ Layer BCM2837
     SYNOPSIS         (Unsupported) BCM2837 processor support libraries
     HELP             (Unsupported) This provides the BCM2837 processor \
                      support libraries (PSL).
-    VERSION          0.1.1.2
+    VERSION          0.1.1.3
     VENDOR           Wind River
     FEATURE          PSL
     VSB_REQUIRES     CPU_ARMARCH8A || CPU_CORE_ARMARCH8A
