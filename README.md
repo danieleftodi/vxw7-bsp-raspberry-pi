@@ -133,26 +133,26 @@ can be found under rpi_3-W.X.Y.Z directory.
 
 By now, the support of drivers in this Open Source BSP is as below:
 
-| Hardware Interface | Controller | Driver/Component | Status |
-| ------ | ------ | ------ | ------ |
-Mini UART | on-chip | DRV_SIO_FDT_NS16550 | SUPPORTED 
-BCM2837 L1 INTCTLR | on-chip    | DRV_INTCTLR_FDT_BCM2837_L1_INTC | SUPPORTED 
-BCM2837 INTCTLR    | on-chip    | DRV_INTCTLR_FDT_BCM2837_INTC    | SUPPORTED
-ARM Generic Timer  | on-chip    | DRV_ARM_GEN_TIMER               | SUPPORTED
-System Timer       | on-chip    | DRV_TIMER_FDT_BCM2837_SYSTIMER  | SUPPORTED
-Clock              | on-chip    | N/A                            | UNSUPPORTED
-GPIO               | on-chip    | DRV_GPIO_FDT_BCM2837            | SUPPORTED
-I2C                | on-chip    | DRV_I2C_FDT_BCM2837             | SUPPORTED
-PinMux             | on-chip    | N/A                            | UNSUPPORTED
-SPI                | on-chip    | DRV_SPI_FDT_BCM2837             | SUPPORTED
-USB HOST           | on-chip    | USB Host Stack(DWC2DR)          | SUPPORTED
-USB ETHERNET       | on-chip    | INCLUDE_USB_GEN2_LAN78XX        | SUPPORTED
-Audio              | on-chip    | N/A                            | UNSUPPORTED
-HDMI               | on-chip    | N/A                            | UNSUPPORTED
-Watchdog Module    | on-chip    | N/A                            | UNSUPPORTED
-EMMC               | on-chip    | N/A                            | UNSUPPORTED
-Wireless LAN       | unknown    | N/A                                | UNSUPPORTED
-Bluetooth          | unknown    | N/A                            | UNSUPPORTED
+| Hardware Interface | Controller | Driver / Component              | Status      |
+| ------------------ | ---------- | ------------------------------- | ----------- |
+| Mini UART          | on-chip    | DRV_SIO_FDT_NS16550             | SUPPORTED   |
+| BCM2837 L1 INTCTLR | on-chip    | DRV_INTCTLR_FDT_BCM2837_L1_INTC | SUPPORTED   |
+| BCM2837 INTCTLR    | on-chip    | DRV_INTCTLR_FDT_BCM2837_INTC    | SUPPORTED   |
+| ARM Generic Timer  | on-chip    | DRV_ARM_GEN_TIMER               | SUPPORTED   |
+| System Timer       | on-chip    | DRV_TIMER_FDT_BCM2837_SYSTIMER  | SUPPORTED   |
+| Clock              | on-chip    | N/A                             | UNSUPPORTED |
+| GPIO               | on-chip    | DRV_GPIO_FDT_BCM2837            | SUPPORTED   |
+| I2C                | on-chip    | DRV_I2C_FDT_BCM2837             | SUPPORTED   |
+| PinMux             | on-chip    | N/A                             | UNSUPPORTED |
+| SPI                | on-chip    | DRV_SPI_FDT_BCM2837             | SUPPORTED   |
+| USB HOST           | on-chip    | USB Host Stack(DWC2DR)          | SUPPORTED   |
+| USB ETHERNET       | on-chip    | INCLUDE_USB_GEN2_LAN78XX        | SUPPORTED   |
+| Audio              | on-chip    | N/A                             | UNSUPPORTED |
+| HDMI               | on-chip    | N/A                             | UNSUPPORTED |
+| Watchdog Module    | on-chip    | N/A                             | UNSUPPORTED |
+| EMMC               | on-chip    | N/A                             | UNSUPPORTED |
+| Wireless LAN       | unknown    | N/A                             | UNSUPPORTED |
+| Bluetooth          | unknown    | N/A                             | UNSUPPORTED |
 
 The detailed introduction of these drivers and usage can also be found in target.txt.
 
