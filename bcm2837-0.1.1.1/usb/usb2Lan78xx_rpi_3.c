@@ -1,7 +1,7 @@
 /* usb2Lan78xx_rpi_3.c - USB Lan78xx device class driver using the WRS USB2 API */
 
 /*
- * Copyright (c) 2019 Wind River Systems, Inc.
+ * Copyright (c) 2019-2020 Wind River Systems, Inc.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -33,6 +33,7 @@
 /*
 modification history
 --------------------
+22apr20,whu  added link status update
 20may19,hkl  created (F11409)
 */
 
@@ -1180,11 +1181,11 @@ LOCAL VOID usb2Lan78xxStatusCheck
 
     if (phyWord & pConfigFlag->uLinkStatusMask)
         {
-        pDevice->bLinked = TRUE;
+        (void) usb2EndLinkUpdate(pDevice, TRUE);
         }
     else
         {
-        pDevice->bLinked = FALSE;
+        (void) usb2EndLinkUpdate(pDevice, FALSE);
         }
 
     return;
