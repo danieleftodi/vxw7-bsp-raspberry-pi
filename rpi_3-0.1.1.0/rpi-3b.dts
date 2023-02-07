@@ -1,0 +1,54 @@
+/dts-v1/;
+
+#include "prjParams.h"
+#include "rpi-3.dtsi"
+
+/   {
+    model = "Raspberry Pi 3 Model B - ARMv8";
+
+    aliases
+        {
+        serial1 = &uart1;
+        ethernet0 = &ethernet;
+        };
+
+    memory
+        {
+        device_type = "memory";
+        reg = <0x0 0x0 0x0 0x3b400000>;
+        };
+
+    chosen
+        {
+        bootargs = "usb2End(0,0)host:vxWorks h=192.168.0.2 e=192.168.0.3:ffffff00 g=192.168.0.1 u=target pw=vxTarget";
+        stdout-path = "serial1";
+        };
+    };
+
+&usb
+    {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    usbhub1@1
+        {
+        reg = <1>;
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        usbhub2@1
+            {
+            compatible = "usb424,9514";
+            reg = <1>;
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            ethernet: usbether@1
+                {
+                compatible = "usb424,ec00";
+                reg = <1>;
+                local-mac-address = [ 00 11 22 33 44 55 ];
+                };
+            };
+        };
+    };
