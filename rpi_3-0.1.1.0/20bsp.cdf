@@ -1,7 +1,7 @@
 /* 20bsp.cdf - BSP component description file */
 
 /*
- * Copyright (c) 2019 Wind River Systems, Inc.
+ * Copyright (c) 2019-2021 Wind River Systems, Inc.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -32,6 +32,8 @@
 /*
 modification history
 --------------------
+02mar21,swu  update board names (VXWPG-1607)
+23mar20,k_s  removed parameters NUM_TTY and CONSOLE_TTY (V7COR-7004)
 08mar19,npc  created (F11409)
 */
 
@@ -46,17 +48,15 @@ Parameter VX_SMP_NUM_CPUS {
 }
 
 Selection BOARD_SELECTION {
-    NAME        Board selection
-    SYNOPSIS    This BSP supports multiple boards. Choose your desired hardware \
-                from this list.
+    NAME        Board Selection
     COUNT       1-1
     CHILDREN    INCLUDE_RPI_3B_PLUS
     DEFAULTS    INCLUDE_RPI_3B_PLUS
-    _CHILDREN   FOLDER_BSP_CONFIG
+    _CHILDREN   FOLDER_HIDDEN
 }
 
 Component INCLUDE_RPI_3B_PLUS {
-    NAME        Raspberry Pi 3 Model B+ board support
+    NAME        Raspberry Pi 3 Model B+
     SYNOPSIS    This component configures your project to support the \
                 Raspberry Pi 3 Model B+.
 }
@@ -135,20 +135,6 @@ Parameter DEFAULT_BOOT_LINE {
     SYNOPSIS    This parameter provides the default boot line string.
     TYPE        string
     DEFAULT     "dummy(0,0)host:vxWorks h=192.168.0.2 e=192.168.0.3 u=target pw=vxTarget"
-}
-
-Parameter CONSOLE_TTY {
-    NAME        Console serial port
-    SYNOPSIS    This parameter specifies which console serial port is used.
-    DEFAULT     0
-}
-
-Parameter NUM_TTY {
-    NAME        Number of serial ports
-    SYNOPSIS    This parameter specifies the number of console serial ports to \
-                be enabled.
-    DEFAULT     (INCLUDE_RPI_3B_PLUS)::(1) \
-                1
 }
 
 Parameter CONSOLE_BAUD_RATE {
