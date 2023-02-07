@@ -147,6 +147,7 @@ By now, the support of drivers in this Open Source BSP is as below:
 | SPI                | on-chip    | DRV_SPI_FDT_BCM2837             | SUPPORTED   |
 | USB HOST           | on-chip    | USB Host Stack(DWC2DR)          | SUPPORTED   |
 | USB ETHERNET       | on-chip    | INCLUDE_USB_GEN2_LAN78XX        | SUPPORTED   |
+| USB ETHERNET       | on-chip    | INCLUDE_USB_GEN2_LAN9514        | SUPPORTED   |
 | Audio              | on-chip    | N/A                             | UNSUPPORTED |
 | HDMI               | on-chip    | N/A                             | UNSUPPORTED |
 | Watchdog Module    | on-chip    | N/A                             | UNSUPPORTED |
