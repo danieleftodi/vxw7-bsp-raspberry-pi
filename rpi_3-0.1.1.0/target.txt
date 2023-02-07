@@ -1,6 +1,6 @@
 target.txt - raspberry pi 3 specific documentation
 
-Copyright (c) 2019 Wind River Systems, Inc.
+Copyright (c) 2019-2020 Wind River Systems, Inc.
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -29,6 +29,7 @@ USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 modification history
 --------------------
+07dec20,cal  Update documentation references and remove 7's (VXWEXEC-55260)
 14jun19,jzh  update U-Boot image
 20may19,hkl  added USB controller and USB network card support (F11409)
 08mar19,hkl  created (F11409)
@@ -160,29 +161,29 @@ This section describes how to run VxWorks on the supported boards.
         In the step of "Project Setup" in WorkBench, select
         rpi_3_0_1_0_0 UNSUPPORTED.
 
-        Or just use one of the following commands in the VxWorks 7 Development
+        Or just use one of the following commands in the VxWorks Development
         Shell:
 
         vxprj vsb create -bsp rpi_3_0_1_0_0 -S ~/myVsb
 
         The BSP version number "0_1_0_0" may be changed as the BSP updated,
         you may need to choose in the WorkBench or check which version you
-        want by below command in the VxWorks 7 Development Shell:
+        want by below command in the VxWorks Development Shell:
 
         vxprj vsb listBsps
 
         3.1.2 Build the VSB
 
         Build the VSB in the WorkBench or use below command in the
-        VxWorks 7 Development Shell:
+        VxWorks Development Shell:
 
         vxprj build
 
     3.2 Create a VIP based on the new VSB
 
-        Please note: Both WorkBench and the VxWorks 7 Development Shell can
+        Please note: Both WorkBench and the VxWorks Development Shell can
         be used for VIP creating and configuring. All below sections will only
-        use the VxWorks 7 Development Shell command as an example, and the
+        use the VxWorks Development Shell command as an example, and the
         corresponding operation in WorkBench is quite straight forward.
 
         3.2.1 Create a VIP based on the new VSB
@@ -195,7 +196,7 @@ This section describes how to run VxWorks on the supported boards.
 
             3.2.2.1 Configure the device tree blob (DTB) loading method
 
-            The VxWorks 7 ARM BSP uses device tree nodes to describe device
+            The VxWorks ARM BSP uses device tree nodes to describe device
             specific information, and there are two methods to load the device
             tree blob:
                 - Embedded:     the device tree blob is embedded in the VxWorks
@@ -307,7 +308,7 @@ This section describes how to run VxWorks on the supported boards.
 
 5. Summary
 
-    Below is a summary about configuring and running VxWorks 7:
+    Below is a summary about configuring and running VxWorks:
 
                 | uVxWorks      | vxWorks.bin
 --------------------------------------------------------
@@ -414,10 +415,10 @@ Board                          | Type                   | Revision
 Raspberry Pi 3 Model B  board  | N/A                    | N/A
 Raspberry Pi 3 Model B+ board  | N/A                    | N/A
 
-Note: 
+Note:
       1) All the other revisions of the same board might work with this
          BSP, but it is not officially supported.
-      2) The USB Ethernet card integrated on Raspberry Pi 3 Model B board 
+      2) The USB Ethernet card integrated on Raspberry Pi 3 Model B board
          is not supported.
 
 Serial Configuration
@@ -496,10 +497,10 @@ The USB layer must be added to the created VSB.
 
     vxprj vsb add USB
 
-While in the created VIP, components for Raspberry Pi 3 DWC2DR and PHY 
-need to be enabled. To use different USB devices, USB class drivers need to be 
-enabled too. Please refer to USB programmer guide for more detail to enable 
-kinds of USB class drivers. For example, following components will add USB mass 
+While in the created VIP, components for Raspberry Pi 3 DWC2DR and PHY
+need to be enabled. To use different USB devices, USB class drivers need to be
+enabled too. Please refer to USB programmer guide for more detail to enable
+kinds of USB class drivers. For example, following components will add USB mass
 storage class driver to support USB mass storage devices:
 
     vxprj component add INCLUDE_SYNOPSYSHCI_INIT_RPI_3
@@ -509,7 +510,7 @@ storage class driver to support USB mass storage devices:
 USB ETHERNET
 
 Raspberry Pi 3 Model B+ board uses one USB Ethernet card to provide network. To
-use Ethernet port, the USB controller and USB Ethernet card components need to be 
+use Ethernet port, the USB controller and USB Ethernet card components need to be
 added.
 Note: The USB Ethernet card of Raspberry Pi 3 Model B board is not supported yet.
 
@@ -571,7 +572,7 @@ Raspberry Pi 3 Model B+:
 SEE ALSO
 
 Workbench User's Guide
-VxWorks 7 Programmer's Guide
-VxWorks 7 Configuration and Build Guide
-VxWorks 7 ARM Architecture Guide
-VxWorks 7 BSP and Driver Guide
+VxWorks Programmer's Guide
+VxWorks Configuration and Build Guide
+VxWorks ARM Architecture Guide
+VxWorks BSP and Driver Guide
