@@ -52,11 +52,11 @@ and bcm2837 PSL, please check the following installation location to see whether
 BSP and PSL existed already. 
 The rpi_3 BSP is installed at:
 ```Bash
-***installDir***/vxworks/21.07/os/unsupported/rpi_3/rpi_3
+${WIND_HOME}/vxworks/21.07/os/unsupported/rpi_3/rpi_3
 ```
 The bcm2837 PSL is installed at:
 ```Bash
-***installDir***/vxworks/21.07/os/unsupported/rpi_3/bcm2837
+${WIND_HOME}/vxworks/21.07/os/unsupported/rpi_3/bcm2837
 ```
 If the installed version of BSP/PSL is the same or newer than the Open Source BSP 
 published here, there's no need to download and install the Open Source BSP from 
@@ -89,8 +89,8 @@ layers among the source tree.
 Here's how it’s done:
 
 ```Bash
-cp -r rpi_3 ***installDir***/vxworks/21.07/os/unsupported/rpi_3/
-cp -r bcm2837 ***installDir***/vxworks/21.07/os/unsupported/rpi_3/
+cp -r rpi_3 ${WIND_HOME}/vxworks/21.07/os/unsupported/rpi_3/
+cp -r bcm2837 ${WIND_HOME}/vxworks/21.07/os/unsupported/rpi_3/
 ```
 
 #### Install beside the source tree
@@ -110,7 +110,7 @@ export WIND_BSP_PATHS=/home/rpi_3
 ```
 then enter into the existing VxWorks 7 (21.07) installation directory
 ```Bash
-cd ***installDir***
+cd ${WIND_HOME}
 ```
 if use the Development Shell
 ```Bash
