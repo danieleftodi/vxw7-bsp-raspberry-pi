@@ -68,6 +68,6 @@ Component INCLUDE_SYNOPSYSHCI_INIT_RPI_3 {
     SYNOPSIS        Initializes Raspberry Pi 3 Synopsys USB HOST Controller Driver
     _CHILDREN       FOLDER_USB_SYNOPSYSHCI_RPI_3
     REQUIRES        INCLUDE_USB_INIT    \
-                    INCLUDE_HCD_BUS     \
+//                    INCLUDE_HCD_BUS     \
                     INCLUDE_SYNOPSYSHCI_RPI_3
 }
